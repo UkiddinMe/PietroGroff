@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+      });
+
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
 
