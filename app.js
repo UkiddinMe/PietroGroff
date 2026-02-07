@@ -15,6 +15,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
+    // --- Scale pics-container to fit viewport width ---
+    const DESIGN_WIDTH = 1300;   // native layout width (px)
+    const DESIGN_HEIGHT = 7800;  // native layout height (px)
+    const MAX_WIDTH = 1600;      // viewport width at which scaling stops (px)
+
+    const picsContainer = document.querySelector('.pics-container');
+    const pageEl = document.querySelector('.page');
+
+    function scalePicsContainer() {
+        if (!picsContainer || !pageEl) return;
+        const vw = window.innerWidth;
+        const s = Math.min(vw / DESIGN_WIDTH, MAX_WIDTH / DESIGN_WIDTH);
+        const scaledWidth = DESIGN_WIDTH * s;
+        const ml = Math.max(0, (vw - scaledWidth) / 2);
+
+        picsContainer.style.transform = `scale(${s})`;
+        picsContainer.style.marginLeft = `${ml}px`;
+        pageEl.style.height = `${DESIGN_HEIGHT * s + 50}px`;
+    }
+
+    window.addEventListener('resize', scalePicsContainer);
+    scalePicsContainer();
+
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
 

@@ -196,14 +196,16 @@ a {
 /* IMMAGINI PAGINA PRINCIPALE */
 
 .page {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 .pics-container {
+    width: 1300px;
+    height: 7800px;
     margin-top: 50px;
     position: relative;
-    left: auto;
-    top: auto;
-    overflow: visible;
+    transform-origin: top left;
 }
 
 .image {
