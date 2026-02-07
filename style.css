@@ -105,6 +105,91 @@ a {
     font-weight: bold;
 }
 
+/* BURGER MENU */
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background-color: #000;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* MOBILE NAV OVERLAY */
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.95);
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-overlay.active {
+    display: flex;
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-nav-link {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* MOBILE HEADER */
+
+@media (max-width: 1024px) {
+    .header, .header-announcement-bar-wrapper {                                                                                                   
+        padding-top: 12px;                                                                                                                        
+        padding-bottom: 12px;                                                                                                                     
+        padding-left: 16px;                                                                                                                       
+        padding-right: 16px;                                                                                                                      
+    }                                                                                                                                             
+       
+    .header-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
 /*  FINE HEADER */
 
 
@@ -216,6 +301,7 @@ a {
 
 .about-content {
     display: flex;
+    text-align: justify;
 }
 
 .text-container {
@@ -246,10 +332,12 @@ a {
 @media (max-width: 767px) {
     .about-content {
         flex-direction: column-reverse;
+        padding: 5% 8%;
     }
     .text-container,
     .about-image-container {
         flex: 1 1 auto;
+        padding: 5% 8%;
     }
 }
 

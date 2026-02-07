@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.text())
       .then(html => {
         document.getElementById('header').innerHTML = html;
+
+        const burger = document.querySelector('.burger-menu');
+        const overlay = document.querySelector('.mobile-nav-overlay');
+
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+        });
       });
 
     const lightbox = document.getElementById("lightbox");
