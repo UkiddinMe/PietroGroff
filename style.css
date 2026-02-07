@@ -214,6 +214,12 @@ a {
     background-position: center;
     position: absolute;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image.loaded {
+    opacity: 1;
 }
 
 /* LIGHTBOX */

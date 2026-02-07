@@ -89,6 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
         translateY = Math.max(-maxPanY, Math.min(maxPanY, translateY));
     }
 
+    // Fade in images on load
+    document.querySelectorAll(".image").forEach((img) => {
+        if (img.complete) {
+            img.classList.add("loaded");
+        } else {
+            img.addEventListener("load", () => img.classList.add("loaded"));
+        }
+    });
+
     // Open lightbox
     document.querySelectorAll(".image").forEach((img) => {
         img.addEventListener("click", () => {
