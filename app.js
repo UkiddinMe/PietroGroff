@@ -92,9 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Open lightbox
     document.querySelectorAll(".image").forEach((img) => {
         img.addEventListener("click", () => {
-            const bg = getComputedStyle(img).backgroundImage;
-            const url = bg.slice(5, -2);
-            lightboxImg.src = url;
+            lightboxImg.src = img.src;
             lightbox.classList.remove("hidden");
             resetZoom();
             document.body.style.overflow = "hidden";
