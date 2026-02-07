@@ -2,19 +2,11 @@
 /* UTILITY*/
 :root {
     font-family: "Baskervville";
+    background-color: #f5f5f5;
 }
 .hidden {
     display: none;
 }
-/* .invisible {
-    opacity: 0;
-}
-.clickable {
-    cursor: pointer;
-}
-.moved-down {
-    transform: translate(0, 10px);
-} */
 
 /*  HEADER */
 
@@ -130,7 +122,37 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
+    cursor: pointer;
 }
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    transform-origin: center center;
+    cursor: default;
+}
+
+/* FINE LIGHTBOX */
 #pic-1 {
     background-image: url("assets/photos/1.2.jpg");
     left: 43px; top: 0px; width: 732px; height: 914px;
@@ -190,22 +212,41 @@ a {
 
 .about-content {
     display: flex;
-    justify-content: space-around;
 }
 
 .text-container {
+    flex: 1 1 50%;
     font-size: small;
-    padding: 10%;
+    padding: 5% 8%;
+    box-sizing: border-box;
 }
 
 .about-image-container {
-    padding: 10%;
+    flex: 1 1 50%;
+    padding: 5% 8%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 #pic-a {
     background-image: url("assets/photos/The_Webster_PietroGroff_06.jpg");
-    width: 300px; height: 383px;
-    position: static
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 300 / 383;
+    position: static;
+    cursor: default;
+}
+
+@media (max-width: 767px) {
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    .text-container,
+    .about-image-container {
+        flex: 1 1 auto;
+    }
 }
 
 /* FINE ABOUT */

@@ -1,44 +1,137 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-    // const urlPath = "https://ukiddinme.github.io/PietroGroff/"
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let startTranslateX = 0;
+    let startTranslateY = 0;
 
-    // document.getElementsByClassName("page-content").forEach(element => {
+    const MIN_SCALE = 1;
+    const MAX_SCALE = 5;
+    const ZOOM_SPEED = 0.1;
 
-    //     if (window.location.href.endsWith(".com") && element.dataset.pageTitle === "") {
-    //         element.classList.remove("hidden");
-    //     } else if (window.location.href.split('/').last == element.dataset.pageTitle) {
-    //         element.classList.remove("hidden");
-    //     }
+    function resetZoom() {
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+    }
 
-    // });
+    function applyTransform() {
+        if (scale <= 1) {
+            lightboxImg.style.transform = `scale(${scale})`;
+            lightboxImg.style.cursor = "default";
+        } else {
+            lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+            lightboxImg.style.cursor = isDragging ? "grabbing" : "grab";
+        }
+    }
 
-    // document.getElementsByClassName("link-to-page").addEventListener("click", (el)=>{
+    function clampTranslation() {
+        const imgWidth = lightboxImg.offsetWidth;
+        const imgHeight = lightboxImg.offsetHeight;
+        const viewW = window.innerWidth;
+        const viewH = window.innerHeight;
 
-    //     var titolo = el.dataset.linkto + "&mdash; Pietro Groff";
-    //     document.title = titolo;
-    //     window.history.pushState({"html":document.innerHTML,"pageTitle": titolo},"", urlPath);
-        
+        const scaledW = imgWidth * scale;
+        const scaledH = imgHeight * scale;
 
-    //     window.addEventListener("popstate", (e) => {
-    //         if(e.state){
-    //             document.getElementById("content").innerHTML = e.state.html;
-    //             document.title = e.state.pageTitle;
-    //         }
-    //     });
-    // })
-    
+        // Allow panning in both directions, clamping so the image
+        // stays within the viewport (if smaller) or covers it (if larger)
+        const maxPanX = Math.abs(scaledW - viewW) / 2;
+        translateX = Math.max(-maxPanX, Math.min(maxPanX, translateX));
 
+        const maxPanY = Math.abs(scaledH - viewH) / 2;
+        translateY = Math.max(-maxPanY, Math.min(maxPanY, translateY));
+    }
 
+    // Open lightbox
+    document.querySelectorAll(".image").forEach((img) => {
+        img.addEventListener("click", () => {
+            const bg = getComputedStyle(img).backgroundImage;
+            const url = bg.slice(5, -2);
+            lightboxImg.src = url;
+            lightbox.classList.remove("hidden");
+            resetZoom();
+            document.body.style.overflow = "hidden";
+        });
+    });
 
+    // Close lightbox
+    lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.classList.add("hidden");
+            lightboxImg.src = "";
+            resetZoom();
+            document.body.style.overflow = "";
+        }
+    });
 
+    // Zoom with mouse wheel
+    lightbox.addEventListener("wheel", (e) => {
+        e.preventDefault();
 
+        const delta = e.deltaY > 0 ? -ZOOM_SPEED : ZOOM_SPEED;
+        const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, scale + delta));
 
+        if (newScale !== scale) {
+            // Zoom toward mouse position
+            const rect = lightboxImg.getBoundingClientRect();
+            const imgCenterX = rect.left + rect.width / 2;
+            const imgCenterY = rect.top + rect.height / 2;
 
+            // Mouse offset from image center
+            const mouseOffsetX = e.clientX - imgCenterX;
+            const mouseOffsetY = e.clientY - imgCenterY;
 
+            const scaleRatio = newScale / scale;
+            translateX = translateX - mouseOffsetX * (scaleRatio - 1);
+            translateY = translateY - mouseOffsetY * (scaleRatio - 1);
 
+            scale = newScale;
 
+            if (scale <= MIN_SCALE) {
+                translateX = 0;
+                translateY = 0;
+            } else {
+                clampTranslation();
+            }
 
+            applyTransform();
+        }
+    }, { passive: false });
 
+    // Drag to pan
+    lightboxImg.addEventListener("mousedown", (e) => {
+        if (scale <= 1) return;
+        e.preventDefault();
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        startTranslateX = translateX;
+        startTranslateY = translateY;
+        lightboxImg.classList.add("dragging");
+    });
 
+    document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - dragStartX;
+        const dy = e.clientY - dragStartY;
+        translateX = startTranslateX + dx;
+        translateY = startTranslateY + dy;
+        clampTranslation();
+        applyTransform();
+    });
 
-})
+    document.addEventListener("mouseup", () => {
+        if (!isDragging) return;
+        isDragging = false;
+        lightboxImg.classList.remove("dragging");
+        applyTransform();
+    });
+});
