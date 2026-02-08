@@ -254,57 +254,58 @@ a {
 }
 
 /* FINE LIGHTBOX */
+
 #pic-1 {
-    /* /* background-image: url("assets/photos/1.2.webp"); */
-    left: 43px; top: 0px; width: 732px; height: 914px;
+    left: 43px; top: 0px; width: 732px; 
+    aspect-ratio: 732 / 914;
 }
 #pic-2 {
-    /* background-image: url("assets/photos/cK_PietroGroff_Highsnobiety4_1.webp"); */
-    left: 787px; top: 0px; width: 374px; height: 250px;
+    left: 787px; top: 3250px; width: 374px; 
+    aspect-ratio: 374 / 250;
 }
 #pic-3 {
-    /* background-image: url("assets/photos/Go_See_10.24_7.webp"); */
-    left: 520px; top: 595px; width: 578px; height: 722px;
+    left: 800px; top: 455px; width: 410px;
+    aspect-ratio: 578 / 722;
 }
 #pic-4 {
-    /* background-image: url("assets/photos/Insta_FOG_PG_028.webp"); */
-    left: 96px; top: 1345px; width: 532px; height: 798px;
+    left: 96px; top: 1045px; width: 532px; 
+    aspect-ratio: 532 / 798;
 }
 #pic-5 {
-    /* background-image: url("assets/photos/PG_JS_GoSee6.webp"); */
-    left: 762px; top: 1954px; width: 454px; height: 567px;
+    left: 762px; top: 1654px; width: 454px;
+    aspect-ratio: 454 / 567;
 }
 #pic-6 {
-    /* background-image: url("assets/photos/PietroGroff_GoSEEComm_042_1.webp"); */
-    left: 215px; top: 2692px; width: 389px; height: 486px;
+    left: 215px; top: 2392px; width: 389px;
+    aspect-ratio: 389 / 486;
 }
 #pic-7 {
-    /* background-image: url("assets/photos/PietroGroff_IB_Instagram_LT_004.webp"); */
-    left: 610px; top: 2654px; width: 477px; height: 596px;
+    left: 610px; top: 2354px; width: 477px;
+    aspect-ratio: 477 / 596;
 }
 #pic-8 {
-    /* background-image: url("assets/photos/PietroGroff_MAX&Co_LT_001.webp"); */
-    left: 156px; top: 3344px; width: 454px; height: 363px;
+    left: 156px; top: 3044px; width: 454px;
+    aspect-ratio: 454 / 363;
 }
 #pic-9 {
-    /* background-image: url("assets/photos/PietroGroff_MotiviPreFall_LT_004.webp"); */
-    left: 717px; top: 3823px; width: 538px; height: 430px;
+    left: 717px; top: 3523px; width: 538px;
+    aspect-ratio: 538 / 430;
 }
 #pic-10 {
-    /* background-image: url("assets/photos/PietroGroff_QuickProof_0008_1.webp"); */
-    left: 106px; top: 4415px; width: 566px; height: 708px;
+    left: 106px; top: 3915px; width: 566px;
+    aspect-ratio: 566 / 708;
 }
 #pic-11 {
-    /* background-image: url("assets/photos/PLM_PietroGroff_Quickproof011.webp"); */
-    left: 220px; top: 5310px; width: 920px; height: 1150px;
+    left: 220px; top: 4810px; width: 920px;
+    aspect-ratio: 920 / 1150;
 }
 #pic-12 {
-    /* background-image: url("assets/photos/Sicky__1.webp"); */
-    left: 747px; top: 5936px; width: 447px; height: 559px;
+    left: 747px; top: 4036px; width: 447px;
+    aspect-ratio: 447 / 559;
 }
 #pic-13 {
-    /* background-image: url("assets/photos/trial_045.webp"); */
-    left: 106px; top: 6595px; width: 920px; height: 1150px;
+    left: 106px; top: 5995px; width: 920px;
+    aspect-ratio: 920 / 1150;
 }
 
 /* FINE IMMAGINI PAGINA PRINCIPALE */

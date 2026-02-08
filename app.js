@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Scale pics-container to fit viewport width ---
     const DESIGN_WIDTH = 1300;   // native layout width (px)
-    const DESIGN_HEIGHT = 7800;  // native layout height (px)
+    const DESIGN_HEIGHT = 7220;  // native layout height (px)
     const MAX_WIDTH = 1600;      // viewport width at which scaling stops (px)
 
     const picsContainer = document.querySelector('.pics-container');
