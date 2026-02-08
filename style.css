@@ -10,6 +10,10 @@
 
 /*  HEADER */
 
+#site-title {
+    font-size: 20px;
+}
+
 .header, .header-announcement-bar-wrapper {
     position: relative;
     z-index: 2;
@@ -310,29 +314,28 @@ a {
 .about-content {
     display: flex;
     text-align: justify;
+    align-items: center;
 }
 
 .text-container {
     flex: 1 1 50%;
     font-size: small;
-    padding: 5% 6% 5% 10%;
+    padding: 2% 7% 5% 11%;
     box-sizing: border-box;
 }
 
 .about-image-container {
     flex: 1 1 50%;
-    padding: 5% 10% 5% 6%;
+    padding: 3% 11% 5% 7%;
     box-sizing: border-box;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
 }
 
 #pic-a {
-    /* background-image: url("assets/photos/The_Webster_PietroGroff_06.webp"); */
     width: 100%;
     max-width: 300px;
-    aspect-ratio: 300 / 383;
+    aspect-ratio: 900 / 1350;
     position: static;
     cursor: default;
 }
@@ -346,6 +349,9 @@ a {
     .about-image-container {
         flex: 1 1 auto;
         padding: 5% 8%;
+    }
+    #pic-a {
+        max-width: 225px;
     }
 }
 
