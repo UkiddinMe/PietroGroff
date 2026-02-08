@@ -255,57 +255,61 @@ a {
 
 /* FINE LIGHTBOX */
 
-#pic-1 {
+#pic-0 {
     left: 43px; top: 0px; width: 732px; 
     aspect-ratio: 732 / 914;
 }
-#pic-2 {
-    left: 787px; top: 3250px; width: 374px; 
-    aspect-ratio: 374 / 250;
-}
-#pic-3 {
+#pic-1 {
     left: 800px; top: 455px; width: 410px;
     aspect-ratio: 578 / 722;
 }
-#pic-4 {
+#pic-2 {
     left: 96px; top: 1045px; width: 532px; 
     aspect-ratio: 532 / 798;
 }
-#pic-5 {
+#pic-3 {
     left: 762px; top: 1654px; width: 454px;
     aspect-ratio: 454 / 567;
 }
-#pic-6 {
+#pic-4 {
     left: 215px; top: 2392px; width: 389px;
     aspect-ratio: 389 / 486;
 }
-#pic-7 {
+#pic-5 {
     left: 610px; top: 2354px; width: 477px;
     aspect-ratio: 477 / 596;
 }
-#pic-8 {
+#pic-6 {
     left: 156px; top: 3044px; width: 454px;
     aspect-ratio: 454 / 363;
 }
-#pic-9 {
+#pic-7 {
     left: 717px; top: 3523px; width: 538px;
     aspect-ratio: 538 / 430;
 }
-#pic-10 {
+#pic-8 {
     left: 106px; top: 3915px; width: 566px;
     aspect-ratio: 566 / 708;
 }
-#pic-11 {
+#pic-9 {
     left: 220px; top: 4810px; width: 920px;
     aspect-ratio: 920 / 1150;
 }
-#pic-12 {
+#pic-10 {
     left: 747px; top: 4036px; width: 447px;
     aspect-ratio: 447 / 559;
 }
-#pic-13 {
+#pic-11 {
     left: 106px; top: 5995px; width: 920px;
     aspect-ratio: 920 / 1150;
+}
+#pic-12 {
+    left: 106px; top: 5995px; width: 920px;
+    aspect-ratio: 920 / 1150;
+}
+#pic-13 {
+    left: 787px; top: 3250px; width: 374px; 
+    aspect-ratio: 374 / 250;
 }
 
 /* FINE IMMAGINI PAGINA PRINCIPALE */
