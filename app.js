@@ -35,7 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         pageEl.style.height = `${DESIGN_HEIGHT * s + 50}px`;
     }
 
-    window.addEventListener('resize', scalePicsContainer);
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        cancelAnimationFrame(resizeTimer);
+        resizeTimer = requestAnimationFrame(scalePicsContainer);
+    });
     scalePicsContainer();
 
     const lightbox = document.getElementById("lightbox");
@@ -89,17 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
         translateY = Math.max(-maxPanY, Math.min(maxPanY, translateY));
     }
 
-    // Fade in images on load
+    // Fade in images on load + open lightbox on click
     document.querySelectorAll(".image").forEach((img) => {
         if (img.complete) {
             img.classList.add("loaded");
         } else {
             img.addEventListener("load", () => img.classList.add("loaded"));
         }
-    });
 
-    // Open lightbox
-    document.querySelectorAll(".image").forEach((img) => {
         img.addEventListener("click", () => {
             lightboxImg.src = img.src;
             lightbox.classList.remove("hidden");
