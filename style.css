@@ -225,6 +225,68 @@ a {
     cursor: default;
 }
 
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 101;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-arrow:hover {
+    opacity: 1;
+}
+
+.lightbox-arrow::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-top: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-prev::before {
+    transform: rotate(-135deg);
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-next::before {
+    transform: rotate(45deg);
+}
+
+#lightbox-img {
+    transition: opacity 0.15s ease;
+}
+
+@media (max-width: 768px) {
+    .lightbox-arrow {
+        padding: 16px;
+    }
+    .lightbox-arrow::before {
+        width: 12px;
+        height: 12px;
+    }
+    .lightbox-prev {
+        left: 10px;
+    }
+    .lightbox-next {
+        right: 10px;
+    }
+}
+
 /* FINE LIGHTBOX */
 
 #pic-0 {
