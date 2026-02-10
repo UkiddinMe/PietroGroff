@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
             lightbox.classList.remove("hidden");
             resetZoom();
             document.body.style.overflow = "hidden";
+            history.pushState({ lightbox: true }, "");
 
             currentFolder = getFolder(src);
             currentPhotos = folderPhotos[currentFolder] || [];
@@ -177,13 +178,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    function closeLightbox() {
+        if (lightbox.classList.contains("hidden")) return;
+        lightbox.classList.add("hidden");
+        lightboxImg.src = "";
+        resetZoom();
+        document.body.style.overflow = "";
+    }
+
+    // Close lightbox on browser back button
+    window.addEventListener("popstate", (e) => {
+        if (!lightbox.classList.contains("hidden")) {
+            closeLightbox();
+        }
+    });
+
     // Close lightbox
     lightbox.addEventListener("click", (e) => {
         if (e.target !== lightboxImg && e.target !== prevBtn && e.target !== nextBtn) {
-            lightbox.classList.add("hidden");
-            lightboxImg.src = "";
-            resetZoom();
-            document.body.style.overflow = "";
+            history.back();
         }
     });
 
@@ -204,10 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "ArrowLeft") navigateLightbox(-1);
         else if (e.key === "ArrowRight") navigateLightbox(1);
         else if (e.key === "Escape") {
-            lightbox.classList.add("hidden");
-            lightboxImg.src = "";
-            resetZoom();
-            document.body.style.overflow = "";
+            history.back();
         }
     });
 
