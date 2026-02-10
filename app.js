@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function scalePicsContainer() {
         if (!picsContainer || !pageEl) return;
         const vw = window.innerWidth;
+
+        if (vw <= 768) {
+            picsContainer.style.transform = '';
+            picsContainer.style.marginLeft = '';
+            pageEl.style.height = '';
+            return;
+        }
+
         const s = Math.min((vw * 0.84) / DESIGN_WIDTH, MAX_WIDTH / DESIGN_WIDTH);
         const scaledWidth = DESIGN_WIDTH * s;
         const ml = Math.max(0, (vw - scaledWidth) / 2);
