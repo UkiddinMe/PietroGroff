@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Scale pics-container to fit viewport width ---
     const DESIGN_WIDTH = 1300;   // native layout width (px)
-    const DESIGN_HEIGHT = 7020;  // native layout height (px)
+    const DESIGN_HEIGHT = 7440;  // native layout height (px)
     const MAX_WIDTH = 1600;      // viewport width at which scaling stops (px)
 
     const picsContainer = document.querySelector('.pics-container');
@@ -65,9 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
         'assets/photos/10_QuickProof': ['PietroGroff_QuickProof_0008_1.webp', 'PietroGroff_QuickProof_0012.webp', 'PietroGroff_QuickProof_0020.webp', 'PietroGroff_QuickProof_0022_1.webp'],
         'assets/photos/11_PLM': ['PLM_PietroGroff_Quickproof011.webp', 'PLM_PietroGroff_Quickproof013.webp', 'PLM_PietroGroff_Quickproof019.webp'],
         'assets/photos/12_Sicky': ['Sicky__1.webp'],
-        'assets/photos/13_Webster': ['The_Webster_PietroGroff_06.webp', 'The_Webster_PietroGroff_12.webp', 'The_Webster_PietroGroff_31.webp', 'The_Webster_PietroGroff_33.webp'],
-        'assets/photos/14_trial': ['trial_045.webp'],
-        'assets/photos/15_highsnobiety': ['cK_PietroGroff_Highsnobiety4_1.webp', 'cK_PietroGroff_Highsnobiety10.webp', 'cK_PietroGroff_Highsnobiety11.webp'],
+        'assets/photos/13_Diesel': ['Horses_PG_45.webp', 'Horses_PG_46.webp', 'Horses_PG_47.webp'],
+        'assets/photos/14_Webster': ['The_Webster_PietroGroff_06.webp', 'The_Webster_PietroGroff_12.webp', 'The_Webster_PietroGroff_31.webp', 'The_Webster_PietroGroff_33.webp'],
+        'assets/photos/15_trial': ['trial_045.webp'],
+        'assets/photos/16_highsnobiety': ['cK_PietroGroff_Highsnobiety4_1.webp', 'cK_PietroGroff_Highsnobiety10.webp', 'cK_PietroGroff_Highsnobiety11.webp'],
     };
 
     function getFolder(src) {

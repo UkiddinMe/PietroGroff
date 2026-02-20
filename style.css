@@ -178,7 +178,7 @@ a {
 }
 .pics-container {
     width: 1300px;
-    height: 7220px;
+    height: 7600px;
     margin-top: 50px;
     position: relative;
     transform-origin: top left;
@@ -242,7 +242,7 @@ a {
     aspect-ratio: 566 / 708;
 }
 #pic-11 {
-    left: 80px; top: 4810px; width: 520px;
+    left: 80px; top: 5230px; width: 520px;
     aspect-ratio: 920 / 1150;
 }
 #pic-12 {
@@ -250,15 +250,19 @@ a {
     aspect-ratio: 447 / 559;
 }
 #pic-13 {
-    left: 680px; top: 5060px; width: 480px;
-    aspect-ratio: 920 / 1150;
+    left: 300px; top: 4680px; width: 700px;
+    aspect-ratio: 1080 / 721;
 }
 #pic-14 {
-    left: 106px; top: 5795px; width: 920px;
+    left: 680px; top: 5480px; width: 480px;
     aspect-ratio: 920 / 1150;
 }
 #pic-15 {
-    left: 787px; top: 3250px; width: 374px;
+    left: 106px; top: 6215px; width: 920px;
+    aspect-ratio: 920 / 1150;
+}
+#pic-16 {
+    left: 700px; top: 3100px; width: 598px;
     aspect-ratio: 374 / 250;
 }
 
@@ -302,9 +306,10 @@ a {
     #pic-10 { left: auto; top: auto; width: 68%; margin-top: 85px; align-self: flex-start; margin-left: 8%; }
     #pic-11 { left: auto; top: auto; width: 84%; margin-top: 20px; align-self: flex-end; margin-right: 4%; }
     #pic-12 { left: auto; top: auto; width: 52%; margin-top: 72px; align-self: flex-start; margin-left: 12%; }
-    #pic-13 { left: auto; top: auto; width: 78%; margin-top: 18px; align-self: flex-end; margin-right: 6%; }
-    #pic-14 { left: auto; top: auto; width: 100vw; margin-top: 80px; order: 99; }
-    #pic-15 { left: auto; top: auto; width: 62%; margin-top: 55px; align-self: flex-start; margin-left: 7%; }
+    #pic-13 { left: auto; top: auto; width: 72%; margin-top: 55px; align-self: flex-end; margin-right: 5%; }
+    #pic-14 { left: auto; top: auto; width: 78%; margin-top: 18px; align-self: flex-end; margin-right: 6%; }
+    #pic-15 { left: auto; top: auto; width: 100vw; margin-top: 80px; order: 99; }
+    #pic-16 { left: auto; top: auto; width: 82%; margin-top: 55px; align-self: flex-start; margin-left: 7%; }
 }
 
 /* FINE IMMAGINI PAGINA PRINCIPALE */
