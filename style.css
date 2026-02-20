@@ -198,59 +198,67 @@ a {
 
 
 #pic-0 {
-    left: 43px; top: 0px; width: 732px; 
+    left: 43px; top: 0px; width: 732px;
     aspect-ratio: 732 / 914;
 }
 #pic-1 {
+    left: 860px; top: 50px; width: 300px;
+    aspect-ratio: 732 / 914;
+}
+#pic-2 {
+    left: 740px; top: 990px; width: 490px;
+    aspect-ratio: 578 / 722;
+}
+#pic-3 {
     left: 800px; top: 455px; width: 410px;
     aspect-ratio: 578 / 722;
 }
-#pic-2 {
-    left: 96px; top: 1045px; width: 532px; 
+#pic-4 {
+    left: 96px; top: 1045px; width: 532px;
     aspect-ratio: 532 / 798;
 }
-#pic-3 {
+#pic-5 {
     left: 762px; top: 1654px; width: 454px;
     aspect-ratio: 454 / 567;
 }
-#pic-4 {
+#pic-6 {
     left: 215px; top: 2392px; width: 389px;
     aspect-ratio: 389 / 486;
 }
-#pic-5 {
+#pic-7 {
     left: 610px; top: 2354px; width: 477px;
     aspect-ratio: 477 / 596;
 }
-#pic-6 {
+#pic-8 {
     left: 156px; top: 3044px; width: 454px;
     aspect-ratio: 454 / 363;
 }
-#pic-7 {
+#pic-9 {
     left: 717px; top: 3523px; width: 538px;
     aspect-ratio: 538 / 430;
 }
-#pic-8 {
+#pic-10 {
     left: 106px; top: 3915px; width: 566px;
     aspect-ratio: 566 / 708;
 }
-#pic-9 {
+#pic-11 {
     left: 80px; top: 4810px; width: 520px;
     aspect-ratio: 920 / 1150;
 }
-#pic-10 {
+#pic-12 {
     left: 747px; top: 4036px; width: 447px;
     aspect-ratio: 447 / 559;
 }
-#pic-11 {
+#pic-13 {
     left: 680px; top: 5060px; width: 480px;
     aspect-ratio: 920 / 1150;
 }
-#pic-12 {
+#pic-14 {
     left: 106px; top: 5795px; width: 920px;
     aspect-ratio: 920 / 1150;
 }
-#pic-13 {
-    left: 787px; top: 3250px; width: 374px; 
+#pic-15 {
+    left: 787px; top: 3250px; width: 374px;
     aspect-ratio: 374 / 250;
 }
 
@@ -282,19 +290,21 @@ a {
     }
 
     #pic-0  { left: auto; top: auto; width: 75%; margin-top: 0; }
-    #pic-1  { left: auto; top: auto; width: 58%; margin-top: 28px; align-self: flex-end; margin-right: 12%; }
-    #pic-2  { left: auto; top: auto; width: 70%; margin-top: 65px; align-self: flex-start; margin-left: 5%; }
-    #pic-3  { left: auto; top: auto; width: 54%; margin-top: 22px; align-self: flex-end; margin-right: 8%; }
-    #pic-4  { left: auto; top: auto; width: 63%; margin-top: 78px; align-self: flex-start; margin-left: 10%; }
-    #pic-5  { left: auto; top: auto; width: 56%; margin-top: 15px; align-self: flex-end; margin-right: 5%; }
-    #pic-6  { left: auto; top: auto; width: 82%; margin-top: 70px; align-self: flex-start; margin-left: 3%; }
-    #pic-7  { left: auto; top: auto; width: 60%; margin-top: 32px; align-self: flex-end; margin-right: 10%; }
-    #pic-8  { left: auto; top: auto; width: 68%; margin-top: 85px; align-self: flex-start; margin-left: 8%; }
-    #pic-9  { left: auto; top: auto; width: 84%; margin-top: 20px; align-self: flex-end; margin-right: 4%; }
-    #pic-10 { left: auto; top: auto; width: 52%; margin-top: 72px; align-self: flex-start; margin-left: 12%; }
-    #pic-11 { left: auto; top: auto; width: 78%; margin-top: 18px; align-self: flex-end; margin-right: 6%; }
-    #pic-12 { left: auto; top: auto; width: 100vw; margin-top: 80px; order: 99; }
-    #pic-13 { left: auto; top: auto; width: 62%; margin-top: 55px; align-self: flex-start; margin-left: 7%; }
+    #pic-1  { left: auto; top: auto; width: 60%; margin-top: 35px; align-self: flex-end; margin-right: 8%; }
+    #pic-2  { left: auto; top: auto; width: 67%; margin-top: 20px; align-self: flex-start; margin-left: 6%; }
+    #pic-3  { left: auto; top: auto; width: 58%; margin-top: 28px; align-self: flex-end; margin-right: 12%; }
+    #pic-4  { left: auto; top: auto; width: 70%; margin-top: 65px; align-self: flex-start; margin-left: 5%; }
+    #pic-5  { left: auto; top: auto; width: 54%; margin-top: 22px; align-self: flex-end; margin-right: 8%; }
+    #pic-6  { left: auto; top: auto; width: 63%; margin-top: 78px; align-self: flex-start; margin-left: 10%; }
+    #pic-7  { left: auto; top: auto; width: 56%; margin-top: 15px; align-self: flex-end; margin-right: 5%; }
+    #pic-8  { left: auto; top: auto; width: 82%; margin-top: 70px; align-self: flex-start; margin-left: 3%; }
+    #pic-9  { left: auto; top: auto; width: 60%; margin-top: 32px; align-self: flex-end; margin-right: 10%; }
+    #pic-10 { left: auto; top: auto; width: 68%; margin-top: 85px; align-self: flex-start; margin-left: 8%; }
+    #pic-11 { left: auto; top: auto; width: 84%; margin-top: 20px; align-self: flex-end; margin-right: 4%; }
+    #pic-12 { left: auto; top: auto; width: 52%; margin-top: 72px; align-self: flex-start; margin-left: 12%; }
+    #pic-13 { left: auto; top: auto; width: 78%; margin-top: 18px; align-self: flex-end; margin-right: 6%; }
+    #pic-14 { left: auto; top: auto; width: 100vw; margin-top: 80px; order: 99; }
+    #pic-15 { left: auto; top: auto; width: 62%; margin-top: 55px; align-self: flex-start; margin-left: 7%; }
 }
 
 /* FINE IMMAGINI PAGINA PRINCIPALE */

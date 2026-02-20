@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"0_1_nums2\" \"1_nums2\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"01_Go_See_Prima\" \"2_Go_See_Prima\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"1_Go_See_24_7\" \"3_Go_See_24_7\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"2_insta_fog\" \"4_insta_fog\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"3_Go_See_street\" \"5_Go_See_street\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"4_Go_See_Comm\" \"6_Go_See_Comm\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"5_IB\" \"7_IB\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"6_MAX&Co\" \"8_MAX&Co\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"7_Motivi\" \"9_Motivi\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"8_QuickProof\" \"10_QuickProof\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"9_PLM\" \"11_PLM\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"10_Sicky\" \"12_Sicky\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"11_Webster\" \"13_Webster\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"12_trial\" \"14_trial\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ mv \"13_highsnobiety\" \"15_highsnobiety\")",
+      "Bash(__NEW_LINE_bc6d7874e051ab4f__ echo \"done\")"
+    ]
+  }
+}
